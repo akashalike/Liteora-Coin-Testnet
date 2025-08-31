@@ -1,0 +1,61 @@
+# Repo clone kar
+git clone https://github.com/akashalike/Liteora-Coin-Testnet.git
+cd Liteora-Coin-Testnet
+
+# deploy.sh file banao
+echo '#!/bin/bash
+# Liteora Coin (LTc) TON Testnet Deploy Script
+
+WALLET="0QBy_sSD_fEvUQBhCr0BUsS8bheB0RNQBXEWJUfDrVpaL_Oy"
+
+echo "📌 Deploying Liteora Coin (LTc) from wallet: $WALLET"
+
+# Deploy Jetton
+toncli run deploy \
+  --testnet \
+  --wallet $WALLET \
+  --abi JettonMinter.abi.json \
+  --input minter.json
+
+echo "✅ Deployment command sent. Check TON Testnet Explorer for contract address."
+' > deploy.sh
+
+chmod +x deploy.sh
+
+# minter.json file banao
+echo '{
+  "name": "Liteora Coin",
+  "symbol": "LTc",
+  "decimals": 9,
+  "totalSupply": "17700000",
+  "image": "https://i.postimg.cc/PxV98GLC/Picsart-25-08-29-23-32-33-599.png",
+  "description": "Liteora Coin (LTc) is a fast, secure, and community-driven token on the TON Testnet, built for transparency, growth, and the future of Web3."
+}' > minter.json
+
+# README.md file banao
+echo '# Liteora Coin (LTc) – TON Testnet
+
+**Liteora Coin (LTc)** is a community-driven token deployed on the TON Testnet.
+
+## 🪙 Token Info
+- **Name:** Liteora Coin
+- **Symbol:** LTc
+- **Decimals:** 9
+- **Supply:** 17,700,000 LTc
+- **Logo:** [Liteora Logo](https://i.postimg.cc/PxV98GLC/Picsart-25-08-29-23-32-33-599.png)
+
+## 🚀 Deploy Steps
+\`\`\`bash
+git clone https://github.com/akashalike/Liteora-Coin-Testnet.git
+cd Liteora-Coin-Testnet
+chmod +x deploy.sh
+./deploy.sh
+\`\`\`
+
+After deployment, check token on [TON Testnet Explorer](https://testnet.tonscan.org/).
+' > README.md
+
+# Files GitHub pe push karo
+git add .
+git commit -m "Liteora Coin Testnet Deploy Files"
+git push origin main
