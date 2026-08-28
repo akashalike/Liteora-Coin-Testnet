@@ -4,11 +4,11 @@ cd Liteora-Coin-Testnet
 
 # deploy.sh file banao
 echo '#!/bin/bash
-# Liteora Coin (LTc) TON Testnet Deploy Script
+# Nami Token (AMI) TON Testnet Deploy Script
 
 WALLET="0QBy_sSD_fEvUQBhCr0BUsS8bheB0RNQBXEWJUfDrVpaL_Oy"
 
-echo "📌 Deploying Liteora Coin (LTc) from wallet: $WALLET"
+echo "📌 Deploying Nami Token (AMI) from wallet: $WALLET"
 
 # Deploy Jetton
 toncli run deploy \
@@ -24,25 +24,25 @@ chmod +x deploy.sh
 
 # minter.json file banao
 echo '{
-  "name": "Liteora Coin",
-  "symbol": "LTc",
+  "name": "Nami Token",
+  "symbol": "AMI",
   "decimals": 9,
   "totalSupply": "17700000",
-  "image": "https://i.postimg.cc/PxV98GLC/Picsart-25-08-29-23-32-33-599.png",
-  "description": "Liteora Coin (LTc) is a fast, secure, and community-driven token on the TON Testnet, built for transparency, growth, and the future of Web3."
+  "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picsart_26-08-28_20-37-39-885-OIjRipGrx5j7dXcki0yy23NcTl7zrT.png",
+  "description": "Nami Token (AMI) is a fast, secure, and community-driven token on the TON Testnet, built for transparency, growth, and the future of Web3."
 }' > minter.json
 
 # README.md file banao
-echo '# Liteora Coin (LTc) – TON Testnet
+echo '# Nami Token (AMI) – TON Testnet
 
-**Liteora Coin (LTc)** is a community-driven token deployed on the TON Testnet.
+**Nami Token (AMI)** is a community-driven token deployed on the TON Testnet.
 
 ## 🪙 Token Info
-- **Name:** Liteora Coin
-- **Symbol:** LTc
+- **Name:** Nami Token
+- **Symbol:** AMI
 - **Decimals:** 9
-- **Supply:** 17,700,000 LTc
-- **Logo:** [Liteora Logo](https://i.postimg.cc/PxV98GLC/Picsart-25-08-29-23-32-33-599.png)
+- **Supply:** 17,700,000 AMI
+- **Logo:** [Nami Token Logo](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picsart_26-08-28_20-37-39-885-OIjRipGrx5j7dXcki0yy23NcTl7zrT.png)
 
 ## 🚀 Deploy Steps
 \`\`\`bash
@@ -57,5 +57,5 @@ After deployment, check token on [TON Testnet Explorer](https://testnet.tonscan.
 
 # Files GitHub pe push karo
 git add .
-git commit -m "Liteora Coin Testnet Deploy Files"
+git commit -m "Nami Token Testnet Deploy Files"
 git push origin main
